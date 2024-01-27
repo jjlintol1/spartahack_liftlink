@@ -1,5 +1,7 @@
+import { ClerkProvider } from "@clerk/nextjs";
+
 import type { Metadata } from "next";
-import {  Poppins, Urbanist } from "next/font/google";
+import { Poppins, Urbanist } from "next/font/google";
 import "./globals.css";
 
 import React from "react";
@@ -28,7 +30,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.className} ${poppins.className}`}>{children}</body>
+      <body className={`${urbanist.className} ${poppins.className}`}>
+        <ClerkProvider appearance={{
+          elements: {
+            formButtonPrimary: "bg-primary-500"
+          }
+        }}>{children}</ClerkProvider>
+      </body>
     </html>
   );
 }
