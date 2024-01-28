@@ -8,7 +8,7 @@ import MobileNav from "./MobileNavbar";
 
 const Navbar = () => {
   return (
-    <nav className="fixed z-50 flex w-full items-center justify-between p-6 sm:px-10">
+    <nav className="background-light900_dark200 fixed z-50 flex w-full items-center justify-between p-6 sm:px-10">
       <Link href="/" className="flex gap-3">
         <Image
           src="/assets/images/liftlink_logo.png"

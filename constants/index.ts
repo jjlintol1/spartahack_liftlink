@@ -1,4 +1,4 @@
-import { SidebarLink } from "@/types";
+import { IDiscoverLink, ISidebarLink } from "@/types";
 
 export const themes = [
   { value: "light", label: "Light", icon: "/assets/icons/sun.svg" },
@@ -6,7 +6,7 @@ export const themes = [
   { value: "system", label: "System", icon: "/assets/icons/computer.svg" },
 ];
 
-export const sidebarLinks: SidebarLink[] = [
+export const sidebarLinks: ISidebarLink[] = [
   // {
   //   imgURL: "/assets/icons/home.svg",
   //   route: "/",
@@ -56,3 +56,26 @@ export const sidebarLinks: SidebarLink[] = [
     public: false,
   },
 ];
+
+export const discoverLinks: IDiscoverLink[] = [
+  {
+    icon: "/assets/icons/line-chart.svg",
+    label: "Workout Routines",
+    route: "/"
+  },
+  {
+    icon: "/assets/icons/dumbbell.svg",
+    label: "Exercises",
+    route: "/"
+  },
+  {
+    icon: "/assets/icons/users.svg",
+    label: "Community",
+    route: "/"
+  },
+  {
+    icon: "/assets/icons/calendar.svg",
+    label: "Workout Splits",
+    route: "/"
+  },
+]
