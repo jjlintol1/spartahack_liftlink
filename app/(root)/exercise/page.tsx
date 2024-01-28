@@ -9,7 +9,7 @@ const Exercise = async () => {
 
   return (
     <>
-      <h1 className='h1-bold'>Exercises</h1>
+      <h1 className='h1-bold text-dark100_light900'>Exercises</h1>
       <div className='mt-10'>
         <LocalSearch route="/exercise" placeholder="Search exercises" />
       </div>
