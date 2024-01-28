@@ -21,3 +21,9 @@ export interface IUpdateUserParams {
 export interface IDeleteUserParams {
   clerkId: string;
 }
+
+export interface IGetExercisesParams {
+  query?: string;
+  page?: number;
+  pageSize?: number;
+}

@@ -18,7 +18,7 @@ const HomeExerciseCard = ({
   target
 }: IHomeExerciseCardProps) => {
   return (
-    <Link href={`/exercise/${id}`} className="card-wrapper rounded-xl p-4">
+    <Link href={`/exercise/${id}`} className="card-wrapper max-w-[282px] rounded-xl p-4">
       <Image
         src={gifUrl}
         alt={name}
