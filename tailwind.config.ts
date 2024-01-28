@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
+          600: "#1DA1F2",
           500: "#5CE1E6",
           100: "#DBFEFF",
         },
@@ -37,6 +38,7 @@ module.exports = {
           500: "#7B8EC8",
           400: "#858EAD",
         },
+        "accent-blue": "#1DA1F2",
       },
       fontFamily: {
         urbanist: ["var(--font-urbanist)"],
