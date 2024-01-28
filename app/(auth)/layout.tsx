@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react' // import react
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
