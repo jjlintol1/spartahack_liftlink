@@ -3,7 +3,7 @@ import HomeExerciseCard from '@/components/card/HomeExerciseCard';
 import HomeRoutineCard from '@/components/card/HomeRoutineCard'
 import { Button } from '@/components/ui/button'
 import { discoverLinks } from '@/constants';
-import { dummyExercises } from '@/constants/exercises';
+// import { dummyExercises } from '@/constants/exercises';
 import { getExercises } from '@/lib/actions/exercise.action';
 import React from 'react'
 
