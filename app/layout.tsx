@@ -5,6 +5,7 @@ import { Poppins, Urbanist } from "next/font/google";
 import "./globals.css";
 
 import React from "react";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -31,11 +32,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${urbanist.className} ${poppins.className}`}>
-        <ClerkProvider appearance={{
-          elements: {
-            formButtonPrimary: "bg-primary-500"
-          }
-        }}>{children}</ClerkProvider>
+        <ClerkProvider
+          appearance={{
+            elements: {
+              formButtonPrimary: "bg-primary-500",
+            },
+          }}
+        >
+          <ThemeProvider>{children}</ThemeProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
