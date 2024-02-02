@@ -38,6 +38,12 @@ module.exports = {
           500: "#7B8EC8",
           400: "#858EAD",
         },
+        orange: {
+          500: "#FFA500",
+        },
+        green: {
+          300: "#39FF14"
+        },
         "accent-blue": "#1DA1F2",
       },
       fontFamily: {

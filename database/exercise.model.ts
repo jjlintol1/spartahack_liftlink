@@ -7,6 +7,7 @@ export interface IExercise extends Document {
   id: number;
   name: string;
   target: string;
+  routines: Schema.Types.ObjectId[];
 }
 
 const exerciseSchema = new Schema<IExercise>(
@@ -17,6 +18,7 @@ const exerciseSchema = new Schema<IExercise>(
     id: { type: Number, required: true },
     name: { type: String, required: true },
     target: { type: String, required: true },
+    routines: [{ type: Schema.Types.ObjectId, ref: 'Routine' }]
   },
 );
 

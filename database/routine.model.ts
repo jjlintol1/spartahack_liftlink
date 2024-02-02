@@ -3,16 +3,16 @@ import { models, model, Schema, Document } from "mongoose";
 export interface IExerciseObject {
     exercise: Schema.Types.ObjectId;
     sets: number;
-    repetitions: number;
-    restPeriod: number;
+    reps: number;
+    rest: number;
 }
 
 export interface IExerciseRoutine extends Document {
-    name: string;
+    title: string;
     description?: string;
     duration?: number;
 
-    equipmentNeeded?: string;
+    equipmentNeeded?: string[];
     targetedMuscleGroups?: string[];
     exercises: IExerciseObject[];
     author: string;
@@ -27,18 +27,17 @@ export interface IExerciseRoutine extends Document {
   }
 
 const routineSchema = new Schema({
-  name: { type: String, required: true },
+  title: { type: String, required: true },
   description: { type: String },
   duration: { type: Number },
-
-  equipmentNeeded: { type: String },
+  equipmentNeeded: [{ type: String }],
   targetedMuscleGroups: [{ type: String }],
   exercises: [
     {
       exercise: { type: Schema.Types.ObjectId, ref: "Exercise" },
       sets: { type: Number },
-      repetitions: { type: Number },
-      restPeriod: { type: Number }, // in seconds
+      reps: { type: Number },
+      rest: { type: Number }, // in seconds
     },
   ],
   author: { type: Schema.Types.ObjectId, ref: "User" }, // Assuming author is a username or user ID
@@ -47,7 +46,6 @@ const routineSchema = new Schema({
   comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
   dateCreated: { type: Date, default: Date.now },
   lastUpdated: { type: Date, default: Date.now },
-
   linkedSchedules: [{ type: Schema.Types.ObjectId, ref: 'Schedule' }],
 });
 

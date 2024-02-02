@@ -14,8 +14,8 @@ const Exercise = async () => {
         <LocalSearch route="/exercise" placeholder="Search exercises" />
       </div>
       <div className='mt-6 flex w-full flex-wrap gap-6'>
-        {result.exercises.map((item, i) => (
-          <HomeExerciseCard key={i} id={item._id} bodyPart={item.bodyPart} name={item.name} gifUrl={item.gifUrl} target={item.target} />
+        {result.exercises.map((item: any) => (
+          <HomeExerciseCard key={item._id} id={item._id} bodyPart={item.bodyPart} name={item.name} gifUrl={item.gifUrl} target={item.target} />
         ))}
       </div>
     </>
