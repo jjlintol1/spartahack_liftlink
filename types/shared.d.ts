@@ -42,3 +42,13 @@ export interface ICreateRoutineParams {
   targetedMuscleGroups?: string[];
   path: string;
 }
+
+export interface IGetRoutinesParams {
+  searchQuery?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export interface IGetRoutineByIdParams {
+  routineId: string;
+}

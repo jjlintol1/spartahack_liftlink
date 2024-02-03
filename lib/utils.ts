@@ -23,6 +23,36 @@ export function calculateWorkoutDuration(exercises: IExerciseObject[]) {
   return duration;
 }
 
+/**
+ * Converts a duration in seconds into a formatted string representation.
+ *
+ * @param {number} seconds - The duration in seconds.
+ * @returns {string} A formatted string representing hours and minutes (e.g., "1h 30m").
+ */
+export function formatTime(seconds: number): string {
+  if (isNaN(seconds) || seconds < 0) {
+    return 'Invalid input';
+  }
+
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+
+  /**
+   * Formatted hours string.
+   * @type {string}
+   */
+  const formattedHours = hours > 0 ? `${hours}h ` : '';
+
+  /**
+   * Formatted minutes string.
+   * @type {string}
+   */
+  const formattedMinutes = minutes > 0 ? `${minutes}m` : '';
+
+  return `${formattedHours}${formattedMinutes}`;
+}
+
+
 interface IFormUrlQueryParams {
   params: string;
   key: string;

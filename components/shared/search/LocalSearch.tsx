@@ -55,7 +55,7 @@ const LocalSearch = ({
 
   return (
     <div
-      className={`background-light800_darkgradient flex min-h-[56px] w-full max-w-[500px] grow items-center gap-4 rounded-3xl px-4 ${otherClasses}`}
+      className={`background-light800_darkgradient flex min-h-[56px] w-full grow items-center gap-4 rounded-3xl px-4 ${otherClasses}`}
     >
       <Image
         src="/assets/icons/search.svg"
