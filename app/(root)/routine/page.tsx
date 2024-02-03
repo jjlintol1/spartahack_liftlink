@@ -13,30 +13,30 @@ const Routine = async () => {
   const { routines } = result;
 
   return (
-    <div className="flex gap-4">
-      <div className="flex-1 overflow-y-auto">
+    <>
         <h1 className="h1-bold text-dark100_light900">Workout Routines</h1>
         <div className="mt-10">
-          <LocalSearch route="/routines" placeholder="Search routines" />
+          <LocalSearch route="/routine" placeholder="Search routines" />
         </div>
         <div className="mt-6 flex w-full flex-col gap-6">
           {routines.length > 0 ? (
-            [1, 2, 3, 4, 5, 6, 7].map((item) => (
+            routines.map((item) => (
               <RoutineCard
-                key={item}
-                _id={routines[0]._id}
-                title={routines[0].title}
-                author={routines[0].author}
-                targetedMuscleGroups={routines[0].targetedMuscleGroups}
-                upvotes={routines[0].upvotes.length}
-                duration={routines[0].duration}
+                key={item._id}
+                _id={item._id}
+                title={item.title}
+                author={item.author}
+                targetedMuscleGroups={item.targetedMuscleGroups}
+                upvotes={item.upvotes.length}
+                duration={item.duration}
               />
             ))
           ) : (
             <div>No Routines</div>
           )}
         </div>
-      </div>
+    
+     
       {/* <div className="custom-scrollbar sticky right-0 top-0 flex h-screen w-[400px] scroll-pt-36 flex-col gap-6 overflow-y-auto pl-10 max-xl:hidden">
         <div className="relative h-[250px] w-full">
           <Image
@@ -105,7 +105,7 @@ const Routine = async () => {
           <Button className="btn-primary">View Routine</Button>
         </Link>
       </div> */}
-    </div>
+    </>
   );
 };
 

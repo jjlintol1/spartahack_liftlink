@@ -6,6 +6,11 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "v2.exercisedb.io",
                 pathname: "/image/*"
+            },
+            {
+                protocol: "https",
+                hostname: "img.clerk.com",
+                pathname: "/*"
             }
         ]
     }
