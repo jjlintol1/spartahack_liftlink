@@ -78,4 +78,30 @@ export const discoverLinks: IDiscoverLink[] = [
     label: "Workout Splits",
     route: "/"
   },
-]
+];
+
+export const bodyParts = [
+  { id: 'back', label: 'Back' },
+  { id: 'cardio', label: 'Cardio' },
+  { id: 'chest', label: 'Chest' },
+  { id: 'lowerarms', label: 'Lower Arms' },
+  { id: 'lowerlegs', label: 'Lower Legs' },
+  { id: 'neck', label: 'Neck' },
+  { id: 'shoulders', label: 'Shoulders' },
+  { id: 'upperarms', label: 'Upper Arms' },
+  { id: 'upperlegs', label: 'Upper Legs' },
+  { id: 'waist', label: 'Waist/Abs' },
+  { id: 'other', label: 'Other' },
+];
+
+export const equipmentCategories = [
+  { id: 'machines', label: 'Machines' },
+  { id: 'freeweights', label: 'Free Weights' },
+  { id: 'bodyweight', label: 'Bodyweight' },
+  { id: 'cardio', label: 'Cardio' },
+  { id: 'homegym', label: 'Home Gym Accessories' },
+  { id: 'Bands', label: 'Bands' },
+];
+
+
+

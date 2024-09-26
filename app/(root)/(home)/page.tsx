@@ -3,7 +3,8 @@ import HomeExerciseCard from '@/components/card/HomeExerciseCard';
 import HomeRoutineCard from '@/components/card/HomeRoutineCard'
 import { Button } from '@/components/ui/button'
 import { discoverLinks } from '@/constants';
-import { dummyExercises } from '@/constants/exercises';
+// import { dummyExercises } from '@/constants/exercises';
+import { getExercises } from '@/lib/actions/exercise.action';
 import React from 'react'
 
 const homeRoutines = [
@@ -53,7 +54,9 @@ const homeRoutines = [
   },
 ];
 
-const Home = () => {
+const Home = async () => {
+  const exerciseResult = await getExercises({});
+
   return (
     <>
       <div className='w-full'>
@@ -81,8 +84,8 @@ const Home = () => {
       <div className='mt-10'>
         <h2 className='h2-semibold text-dark200_light800'>Hot Workouts</h2>
         <div className='mt-6 flex w-full gap-6 overflow-x-auto' style={{ overflowX: 'auto' }}>
-          {dummyExercises.map((item, i) => (
-            <HomeExerciseCard key={i} id={item.id} bodyPart={item.bodyPart} name={item.name} gifUrl={item.gifUrl} target={item.target} />
+          {exerciseResult.exercises.map((item: any) => (
+            <HomeExerciseCard key={item._id} id={item._id} bodyPart={item.bodyPart} name={item.name} gifUrl={item.gifUrl} target={item.target} />
           ))}
         </div>
         <div className='mt-6'>

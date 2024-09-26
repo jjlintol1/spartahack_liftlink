@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['v2.exercisedb.io'],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "v2.exercisedb.io",
+                pathname: "/image/*"
+            }
+        ]
     }
 };
 
